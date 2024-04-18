@@ -1,0 +1,130 @@
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-home {
+    width: 300px;
+    margin: 12px 0;
+    border: 1px solid #444;
+    border-radius: 3px;
+    box-shadow: 0 8px 8px 4px #444;
+}
+
+.centerBtn {
+    padding: 8px 20px;
+    margin: 40px 0 0 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 2px solid #ffffff;
+    background: #ffffff23;
+    transition: all .2s linear;
+    color: #fff;
+}
+
+.arrow-right {
+    transition: all .2s linear;
+}
+
+.centerBtn:hover .arrow-right {
+    transform: translateX(8px);
+}
+
+.centerBtn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.welcome-text {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 300px; */
+    padding: 140px 40px;
+    background: linear-gradient(to top, #000000b7, #00000044), url('../media/church-1.jpg') bottom/cover no-repeat;
+    box-shadow: 0 6px 6px #444;
+}
+
+.one {
+    margin: 20px 0 40px 0;
+    padding: 20px 0 20px 10px;
+    text-transform: uppercase;
+    font-size: 70px;
+    color: #fff;
+    font-family: poppins;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.p {
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.mission {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    background: linear-gradient(to top, #00000091, #0000002d), url('../media/our-mission.jpg') bottom/cover no-repeat;
+}
+
+.ourVision-col {
+    width: 100%;
+    background: linear-gradient(120deg, #0a0b30dd 50%, #ffffff00 50%);
+    padding: 140px 40px;
+}
+
+.text-2 {
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 60px;
+}
+
+.gradient-text {
+    font-size: 72px;
+    background: rgb(0, 9, 36);
+    background: linear-gradient(300deg, #050c81ee 15%, #040639 46%, #ffffff 46%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.wedding {
+    width: 95%;
+    background: linear-gradient(110deg, #00000086 50%, #ffffff00 50%), url('../media/wedding-2.jpeg') center/cover no-repeat;
+    padding: 80px 30px;
+}
+
+.two {
+    font-size: 80px;
+    font-family: poppins;
+    font-weight: 600;
+    color: #fff;
+}
+
+.wedding-text {
+    font-size: 22px;
+    color: #fff;
+}
+
+.services {
+    width: 95%;
+}
+
+.home-ul {
+    margin: 0 30px;
+}

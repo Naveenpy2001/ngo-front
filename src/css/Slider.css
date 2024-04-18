@@ -1,0 +1,50 @@
+/* Slider.css */
+
+.slider-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.slick-slider {
+    position: relative;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 24px;
+    color: #fff;
+}
+
+.slick-prev {
+    left: -30px;
+}
+
+.slick-next {
+    right: -30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+
+.slick-dots button:hover {
+    color: #3498db;
+}
