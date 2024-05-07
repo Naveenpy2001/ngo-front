@@ -1,0 +1,84 @@
+/* ServicesPage.css */
+
+.services-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    border-left: 1px solid red;
+    padding: 5px 10px;
+}
+
+.service {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.service-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* serrvices v0.2 */
+/* SocialDevelopmentSection.css */
+
+.section-content-services{
+    padding: 20px 30px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-content-services > p {
+    text-align: left;
+}
+.right-content > h2{
+    text-align: left;
+}
+.section-content-services:nth-child(even) {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: row;
+    border: 1px solid #ddd;
+}
+
+.section-content-services:nth-child(odd) {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: row-reverse;
+    border: 1px solid #ddd;
+}
+
+
+.left-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right-content {
+    max-width: 50%;
+}
+
+.right-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.right-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}

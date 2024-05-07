@@ -1,0 +1,74 @@
+/* DonationPage.css */
+
+.donation-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.donation-page h1 {
+    color: #333;
+}
+
+.donation-info {
+    margin-top: 20px;
+}
+
+.donation-info h2 {
+    color: #333;
+}
+
+.donation-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.payment-option {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.payment-option h2 {
+    color: #333;
+}
+
+.payment-option p {
+    color: #666;
+    margin-top: 10px;
+}
+
+.payment-option form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-option form label {
+    margin-bottom: 10px;
+}
+
+.payment-option form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-option form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-option form button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,67 @@
+/* AboutUsPage.css */
+
+.about-us-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.about-us-content > p {
+    padding: 10px 5px;
+}
+
+
+.page-heading {
+text-align: left;
+margin: 0;
+font-weight: 500;
+padding: 8px 20px;
+border-left: 2px solid red;
+}
+
+.about-us-content {
+    line-height: 1.6;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.team-member {
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #767676;
+    padding: 15px;
+    border-radius: 3px;
+    width: 300px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+}
+
+.profile-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: tomato;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.profile-role {
+    font-style: italic;
+    margin-bottom: 5px;
+    color: #450845;
+    font-weight: 600;
+}
+
+.profile-extra-details {
+    font-size: 14px;
+}

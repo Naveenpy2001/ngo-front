@@ -1,0 +1,21 @@
+/* PartnersPage.css */
+
+.partners-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.partners-page h1 {
+    color: #333;
+}
+
+.partner-logos img {
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.image-slideshow img {
+    max-width: 300px;
+    margin: 0 auto;
+}

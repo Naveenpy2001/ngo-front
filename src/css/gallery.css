@@ -1,0 +1,21 @@
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.image-info {
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+}

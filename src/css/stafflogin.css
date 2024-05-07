@@ -1,0 +1,166 @@
+/* StaffLogin.css */
+
+.staff-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+
+
+h2 {
+    text-align: center;
+}
+
+input[type='email'],
+input[type='text'],
+input[type='tel'],
+input[type='password'] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%;
+    }
+}
+
+/* StaffLogin.css */
+
+.staff-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.login-form {
+    width: 80%;
+    max-width: 450px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social-login {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: white;
+    width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+}
+.email {
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+}
+
+.google {
+    background-color: #db4437;
+    color: white;
+    width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+}
+
+.divider {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.additional-links {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.additional-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+.register-btn{
+    width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+}
+.additional-links a:hover {
+    text-decoration: underline;
+}
+.register-modal{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000090;
+    padding: 100px 0;
+}
+.modal-content{
+    width: 38%;
+    padding: 15px 30px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.register-staff-form{
+    width: 100%;
+    background-color: #fff;
+}

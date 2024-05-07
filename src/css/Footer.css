@@ -33,7 +33,7 @@
     margin: 0;
 }
 
-.email,
+.email-f,
 .phone {
     display: flex;
     align-items: center;

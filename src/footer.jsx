@@ -12,17 +12,17 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3>Contact Information</h3>
-          <p className="email">
-            <HiOutlineMail /> Email: weslyjohnpaulraj@gmail.com
+          <p className="email-f">
+            <HiOutlineMail /> : weslyjohnpaulraj@gmail.com
           </p>
-          <p className="email">
-            <HiOutlineMail /> Email: bethesdagospulministryn@gmail.com
-          </p>
-          <p className="phone">
-            <MdOutlineLocalPhone /> Phone: +91 8142616767{" "}
+          <p className="email-f">
+            <HiOutlineMail /> : bethesdagospulministryn@gmail.com
           </p>
           <p className="phone">
-            <MdOutlineLocalPhone /> Phone: +91 7702221681
+            <MdOutlineLocalPhone /> : +91 8142616767{" "}
+          </p>
+          <p className="phone">
+            <MdOutlineLocalPhone /> : +91 7702221681
           </p>
         </div>
 
@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2024 Your NGO. All rights reserved.</p>
+        <p>&copy; 2024 NGO. All rights reserved.</p>
       </div>
     </footer>
   );
