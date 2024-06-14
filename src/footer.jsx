@@ -31,16 +31,24 @@ const Footer = () => {
           <p>Connect with us on social media:</p>
           <div className="div-social-icons">
             <span>
-              <FaInstagram />
+              <a href="https://www.instagram.com/tsarit1/" className="socialIcons">
+                <FaInstagram />
+              </a>
             </span>
             <span>
-              <FaFacebookSquare />
+              <a href="https://www.facebook.com/profile.php?id=61557389195263" className="socialIcons">
+                <FaFacebookSquare />
+              </a>
             </span>
             <span>
-              <FaYoutube />
+              <a href="https://www.youtube.com/@TsarITServices" className="socialIcons">
+                <FaYoutube />
+              </a>
             </span>
             <span>
-              <FaXTwitter />
+              <a href="https://twitter.com/tsar_it" className="socialIcons">
+                <FaXTwitter />
+              </a>
             </span>
           </div>
         </div>

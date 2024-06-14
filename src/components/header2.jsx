@@ -37,12 +37,12 @@ import '../css/header2.css'
                 </li>
 
                 <li>
-                  <NavLink to="/ContactUs">Contact Us</NavLink>
-                </li>
-                <li>
                   <NavLink to="/staff/login"> Staff Login</NavLink>
                 </li>
                 <li>
+                <li>
+                  <NavLink to="/ContactUs">Contact Us</NavLink>
+                </li>
                   <NavLink to="/DonationPage"> Donation</NavLink>
                 </li>
               </ul>

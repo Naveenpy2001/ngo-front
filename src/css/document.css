@@ -18,3 +18,17 @@
     line-height: 1.6;
     margin: 10px 0;
 }
+
+
+.pdf-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pdf-container>div {
+    flex: 1;
+    margin: 10px;
+    max-width: 45%;
+    max-width: 100%;
+}

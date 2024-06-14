@@ -1,19 +1,151 @@
+// import React, { useState } from "react";
+// import "../css/contactUs.css";
+
+// const ContactForm = () => {
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     phone: "",
+//     message: "",
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData({
+//       ...formData,
+//       [name]: value,
+//     });
+//   };
+// const [loading,setLoading] = useState(false);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setLoading(true);
+
+//     try {
+//       const response = await fetch("http://127.0.0.1:8000/contact/", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(formData),
+//       });
+
+//       if (response.ok) {
+//         alert("Form submitted successfully");
+//         setLoading(false);
+//         setFormData({
+//           name: "",
+//           email: "",
+//           phone: "",
+//           message: "",
+//         });
+//       } else {
+//         // Check the status code of the response
+//         if (response.status === 400) {
+//           // Handle validation errors
+//           alert("Validation error: Please check your input");
+//         } else if (response.status === 401) {
+//           // Handle unauthorized access
+//           alert("Unauthorized: Please login to submit the form");
+//         } else {
+//           // Handle other errors
+//           alert("Failed to submit form: Server error");
+//         }
+//         setLoading(false);
+//       }
+//     } catch (error) {
+//       console.log("Error in submitting form", error);
+//       alert("Failed to submit form: Network error");
+//       setLoading(false);
+//     }
+//   };
+
+
 import React, { useState } from "react";
 import "../css/contactUs.css";
+import Swal from "sweetalert2";
 
 const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  const handleSubmit = (e) => {
+  const [loading,setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log("Name:", name);
-    console.log("Phone:", phone);
-    console.log("Email:", email);
-    console.log("Message:", message);
+        setLoading(true);
+
+    // Validate phone number format (example: digits only)
+    const phoneRegex = /^\d+$/;
+    if (!phoneRegex.test(formData.phone)) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Phone number must contain only digits",
+      });
+      return; // Exit function if validation fails
+    }
+
+    try {
+      const response = await fetch("http://127.0.0.1:8000/contact/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Handle successful form submission
+            setLoading(false);
+
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Your form has been submitted..!",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+        // Reset form data
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        // Handle server-side errors
+            setLoading(false);
+
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Failed to submit form: Server error",
+        });
+      }
+    } catch (error) {
+      // Handle network errors
+          setLoading(false);
+      console.log("Error in submitting form", error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Failed to submit form: Network error",
+      });
+    }
   };
 
   return (
@@ -35,36 +167,42 @@ const ContactForm = () => {
             <input
               type="text"
               id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              name="name" // Added name attribute
+              value={formData.name}
+              onChange={handleChange}
               required
               className="form-input"
+              placeholder="your name"
             />
           </div>
           <div className="form-group">
             <label htmlFor="email" className="form-label">
-              Phone No. :
+              Email:
             </label>
             <input
               type="email"
               id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email" // Added name attribute
+              value={formData.email}
+              onChange={handleChange}
               required
               className="form-input"
+              placeholder="Example@gmail.com"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="tel" className="form-label">
-              Email:
+            <label htmlFor="phone" className="form-label">
+              Phone No. :
             </label>
             <input
               type="tel"
-              id="tel"
-              value={email}
-              onChange={(e) => setPhone(e.target.value)}
+              id="phone"
+              name="phone" // Added name attribute
+              value={formData.phone}
+              onChange={handleChange}
               required
               className="form-input"
+              placeholder="+91 00000 00000"
             />
           </div>
           <div className="form-group">
@@ -73,14 +211,31 @@ const ContactForm = () => {
             </label>
             <textarea
               id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              name="message" // Added name attribute
+              value={formData.message}
+              onChange={handleChange}
               required
               className="form-textarea"
+              placeholder="Enter your thoughts...."
             />
           </div>
           <button type="submit" className="form-submit">
-            Send
+            {loading ? (
+              <div className="flex-center-loader">
+                <div class="dot-spinner">
+                  <div class="dot-spinner__dot"></div>
+                  <div class="dot-spinner__dot"></div>
+                  <div class="dot-spinner__dot"></div>
+                  <div class="dot-spinner__dot"></div>
+                  <div class="dot-spinner__dot"></div>
+                  <div class="dot-spinner__dot"></div>
+                  <div class="dot-spinner__dot"></div>
+                  <div class="dot-spinner__dot"></div>
+                </div>
+              </div>
+            ) : (
+              "SUBMIT"
+            )}
           </button>
         </form>
         <div className="img-c">
@@ -91,11 +246,43 @@ const ContactForm = () => {
           />
         </div>
       </div>
+
+      <div className="flex-center">
+        <div className="address-details">
+          <h3 className="address-details-title">Address Details</h3>
+          <div className="address-field">
+            <strong className="label">Address:</strong>{" "}
+            <span className="value">
+              12-151-37/1, East pate punganur-517247, andhra pradesh , india.
+            </span>
+          </div>
+          <div className="address-field">
+            <strong className="label">City:</strong>{" "}
+            <span className="value">punganur</span>
+          </div>
+          <div className="address-field">
+            <strong className="label">ZIP Code:</strong>{" "}
+            <span className="value">517247</span>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.8324472632903!2d78.56843657850699!3d13.360692453450318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb27f104a493f9f%3A0xf1c096c1a487eb87!2sEast%20peta!5e0!3m2!1sen!2sin!4v1715689353158!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style={{ border: "0", width: "100%" }}
+          allowfullscreen="true"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          className="maaap"
+          title="map"
+        ></iframe>
+      </div>
+
       <center>
         <p className="regards regard-2">
-          Thank you for your interest in . We value your feedback,
-          inquiries, and collaboration opportunities. Please feel free to reach
-          out to us using the information below :
+          Thank you for your interest in. We value your feedback, inquiries, and
+          collaboration opportunities. Please feel free to reach out to us using
+          the information below :
         </p>
       </center>
     </main>

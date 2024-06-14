@@ -1,9 +1,8 @@
 /* PartnersPage.css */
 
 .partners-page {
-    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 120px;
 }
 
 .partners-page h1 {
@@ -18,4 +17,7 @@
 .image-slideshow img {
     max-width: 300px;
     margin: 0 auto;
+}
+.conatinerText > p {
+    margin: 25px 10px;
 }

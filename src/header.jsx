@@ -10,6 +10,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      <h1 className="centerH1">
+        BETHESDA GOSPEL MINISTRY TRUST
+      </h1>
       <div className="container">
         <div className="logo">
           <Logo />
@@ -26,6 +29,10 @@ const Navbar = () => {
             <li>
               <NavLink to="/AboutUs">About Us</NavLink>
             </li>
+
+            <li>
+              <NavLink to="/Services">Services</NavLink>
+            </li>
             <li>
               <NavLink to="/gallery">Gallery</NavLink>
             </li>
@@ -37,10 +44,10 @@ const Navbar = () => {
             </li>
 
             <li>
-              <NavLink to="/ContactUs">Contact Us</NavLink>
+              <NavLink to="/staff/login"> Staff Login</NavLink>
             </li>
             <li>
-              <NavLink to="/staff/login"> Staff Login</NavLink>
+              <NavLink to="/ContactUs">Contact Us</NavLink>
             </li>
             <li>
               <NavLink to="/DonationPage"> Donation</NavLink>
@@ -101,7 +108,11 @@ const Hamburger = () => (
 
 const Logo = () => (
   <>
-    <img src="" alt="logo" />
+    <img
+      src="https://static.wixstatic.com/media/8b6520_76fb9754389d441b95bd5ba5df024c10~mv2.png/v1/fill/w_144,h_134,al_c,q_85,usm_1.20_1.00_0.01,enc_auto/8b6520_76fb9754389d441b95bd5ba5df024c10~mv2.png"
+      alt="logo"
+      width='30%'
+    />
   </>
 );
 

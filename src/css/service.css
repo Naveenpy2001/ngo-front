@@ -35,7 +35,7 @@
 /* SocialDevelopmentSection.css */
 
 .section-content-services{
-    padding: 20px 30px;
+    padding: 10px 20px;
     margin: 10px 0;
     display: flex;
     justify-content: center;
@@ -67,6 +67,7 @@
 .left-content img {
     max-width: 100%;
     height: auto;
+    padding: 20px 30px;
 }
 
 .right-content {

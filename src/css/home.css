@@ -5,7 +5,9 @@
     align-items: center;
     flex-direction: column;
 }
-
+a{
+    text-decoration: none;
+}
 .box-home {
     width: 300px;
     margin: 12px 0;
@@ -82,7 +84,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    background: linear-gradient(to top, #00000091, #0000002d), url('../media/our-mission.jpg') bottom/cover no-repeat;
+    background: linear-gradient(to top, #00000091, #0000002d), url('https://i.pinimg.com/originals/1d/1a/d9/1d1ad9c21f9ea32529338e449d2b2cb6.jpg') center/cover no-repeat;
 }
 
 .ourVision-col {
@@ -101,10 +103,7 @@
 
 .gradient-text {
     font-size: 72px;
-    background: rgb(0, 9, 36);
-    background: linear-gradient(300deg, #050c81ee 15%, #040639 46%, #ffffff 46%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+   color: #fff;
     font-weight: 500;
 }
 

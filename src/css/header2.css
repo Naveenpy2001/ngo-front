@@ -13,7 +13,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: capitalize;
     font-family: "Noto Sans Gujarati",
         sans-serif;
 }
@@ -28,11 +27,12 @@ body {
 }
 
 .navbar {
-    height: 60px;
-    background-color: #fef7e5;
+    height: auto;
+    background-color: #ffffff;
     position: sticky;
-    top: 0;
+    top: -65px;
     z-index: 9;
+    border-bottom: 1px solid #ddd;
 }
 
 /* .logo {} */
@@ -41,7 +41,9 @@ body {
     display: none;
 }
 
-/* .nav-elements {} */
+.nav-elements {
+    margin: 0 50px 0 0;
+}
 
 .nav-elements ul {
     display: flex;
@@ -122,4 +124,14 @@ body {
         margin-right: unset;
         margin-top: 22px;
     }
+}
+
+.centerH1{
+    text-align: center;
+    color: purple;
+    font-size: 34px;
+    margin: 10px 0 10px 0;
+}
+.logo{
+    margin: 5px 0 0 10px;
 }

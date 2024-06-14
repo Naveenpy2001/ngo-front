@@ -1,74 +1,229 @@
-/* DonationPage.css */
-
-.donation-page {
-    max-width: 800px;
+.banner-NGO {
+    background: url("https://www.cry.org/wp-content/uploads/donate-to-children-ngo-india.jpg") center/cover no-repeat;
+    height: 550px;
+    display: flex;
+     justify-content: flex-end;
+    align-items: center;
+    color: #000000;
+}
+.donate{
+    /* border: 1px solid #000; */
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.donations {
+    /* max-width: 800px; */
     margin: 0 auto;
-    padding: 20px;
 }
 
-.donation-page h1 {
+.donations h2 {
     color: #333;
 }
 
-.donation-info {
-    margin-top: 20px;
-}
-
-.donation-info h2 {
-    color: #333;
-}
-
-.donation-info p {
+.donations p {
     color: #666;
-    line-height: 1.6;
 }
 
-.payment-options {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+.form-group {
+    margin-bottom: 20px;
+}
+.donationForm{
+    width: 50%;
+    border: 1px solid #b3b3b3;
+    padding: 50px 40px;
+    margin: 20px 0;
+    border-radius: 3px;
 }
 
-.payment-option {
-    flex: 1;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.payment-option h2 {
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
     color: #333;
 }
 
-.payment-option p {
-    color: #666;
-    margin-top: 10px;
-}
-
-.payment-option form {
-    display: flex;
-    flex-direction: column;
-}
-
-.payment-option form label {
-    margin-bottom: 10px;
-}
-
-.payment-option form input {
-    padding: 8px;
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.payment-option form button {
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.donate-button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff0c79;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.payment-option form button:hover {
-    background-color: #0056b3;
+.donate-button:hover {
+    background-color: #d30663;
+}
+
+.donations h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.donations ul {
+    color: #666;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.donations ul li {
+    margin-bottom: 10px;
+}
+
+.get-involved {
+    margin-top: 20px;
+}
+
+/* animated .animated-button CSS */
+.animated-button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: #000;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.animated-button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: transparent;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.animated-button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.animated-button:hover::before,
+.animated-button:hover::after {
+    transform: scale(0)
+}
+
+.animated-button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+}
+
+.main-donation{
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-donate{
+    font-weight: 500;
+    font-size: 36px;
+    margin: 5px 0 15px 0;
+}
+.ul-donate{
+    list-style: upper-roman;
+
+}
+.donateHeader{
+    padding: 30px 20px;
+}
+.donateHeader  p {
+    margin: 0 40px;
+}
+.flex-start{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/*  donation */
+
+.donation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #3399cc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.donation-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.donation-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.donation-text h2 {
+    color: #333;
+}
+
+.razorpay-payment-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donation-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donation-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.small-white{
+    color: #707070;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0 10px 0;
 }

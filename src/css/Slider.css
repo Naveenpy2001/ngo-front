@@ -1,50 +1,29 @@
-/* Slider.css */
-
 .slider-container {
-    width: 95%;
-    margin: 20px auto;
-}
-
-.slick-slider {
-    position: relative;
-}
-
-.slick-prev,
-.slick-next {
-    font-size: 24px;
-    color: #fff;
-}
-
-.slick-prev {
-    left: -30px;
-}
-
-.slick-next {
-    right: -30px;
-}
-
-.slick-dots {
-    position: absolute;
-    bottom: 10px;
-    list-style: none;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 100%;
+    height: 100vh;
 }
 
-.slick-dots li {
-    margin: 0 5px;
+.text-section {
+    flex: 1;
+    padding: 20px;
 }
 
-.slick-dots button {
-    font-size: 14px;
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    color: #fff;
-    outline: none;
+.text-content {
+    margin-bottom: 40px;
 }
 
-.slick-dots button:hover {
-    color: #3498db;
+.slider-section {
+    flex: 2;
+    max-width: 600px;
+}
+
+.slider-section .slide {
+    height: 400px;
+    /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
 }

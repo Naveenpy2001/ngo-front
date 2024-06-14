@@ -2,7 +2,7 @@
 
 import React from "react";
 import "../css/document.css";
-
+import PDFViewer from "../components/PDFViewer";
 const NGODocument = () => {
   return (
     <div className="ngo-document">
@@ -28,7 +28,11 @@ const NGODocument = () => {
         mattis elit tristique id.
       </p>
       <div className="pdf-viewr">
-        <iframe src="" frameborder="0"></iframe>
+      
+          <h1>PDF Viewer</h1>
+          <div className="pdf-container">
+            <PDFViewer  />
+          </div>
       </div>
     </div>
   );

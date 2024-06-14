@@ -9,9 +9,7 @@
 
 
 
-h2 {
-    text-align: center;
-}
+
 
 input[type='email'],
 input[type='text'],
@@ -36,6 +34,7 @@ input[type='password'] {
         font-size: 16px;
         border-radius: 5px;
         border: 1px solid #ccc;
+        transition: all .2s linear;
 }
 
 .login-button:hover {
@@ -66,9 +65,7 @@ input[type='password'] {
     background-color: #f9f9f9;
 }
 
-h2 {
-    text-align: center;
-}
+
 
 .social-login {
     display: flex;
@@ -140,6 +137,11 @@ h2 {
         font-size: 16px;
         border-radius: 5px;
         border: 1px solid #ccc;
+        cursor: pointer;
+        transition: all .1s linear;
+}
+.register-btn:hover{
+    background-color: #ddd;
 }
 .additional-links a:hover {
     text-decoration: underline;
@@ -152,15 +154,42 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: #00000090;
-    padding: 100px 0;
+    padding: 160px 0;
 }
 .modal-content{
     width: 38%;
     padding: 15px 30px;
     border: 1px solid #000;
     background-color: #fff;
+    position: relative;
 }
 .register-staff-form{
     width: 100%;
     background-color: #fff;
+}
+.close{
+    text-align: right;
+    display: block;
+    transform: translate(22px, -14px);
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+.close:hover{
+    color: red;
+}
+
+.addFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.additional{
+    padding: 10px 5px;
+    color: #007bff;
+}
+.additional:hover{
+        text-decoration: underline;
 }

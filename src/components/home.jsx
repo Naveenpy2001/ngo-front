@@ -6,6 +6,7 @@ import "../css/home.css";
 const Home = () => {
   return (
     <main>
+      <br />
       <div className="home-container">
         <div className="img-slider">
           <SliderComponent />
@@ -23,9 +24,11 @@ const Home = () => {
             and for you, our neighbor.
           </p>
           <center>
-            <button className="centerBtn">
-              Learn more <TiArrowRightThick className="arrow-right" />
-            </button>
+            <a href="/AboutUs">
+              <button className="centerBtn">
+                Learn more <TiArrowRightThick className="arrow-right" />
+              </button>
+            </a>
           </center>
         </div>
 
@@ -41,9 +44,11 @@ const Home = () => {
                   Volunteer opportunities available for various skill sets and
                   interests.
                 </p>
-                <button className="centerBtn smallBtn">
-                  Learn more <TiArrowRightThick className="arrow-right" />
-                </button>
+                <a href="/Register">
+                  <button className="centerBtn smallBtn">
+                    Learn more <TiArrowRightThick className="arrow-right" />
+                  </button>
+                </a>
               </div>
               <div className="tab">
                 <h3>Give Donations</h3>
@@ -52,9 +57,11 @@ const Home = () => {
                   contributions help us continue our mission and reach more
                   people in need.
                 </p>
-                <button className="centerBtn smallBtn">
-                  Learn more <TiArrowRightThick className="arrow-right" />
-                </button>
+                <a href="/DonationPage">
+                  <button className="centerBtn smallBtn">
+                    Learn more <TiArrowRightThick className="arrow-right" />
+                  </button>
+                </a>
               </div>
               <div className="tab">
                 <h3>Quick Fund Rise</h3>
@@ -62,9 +69,11 @@ const Home = () => {
                   Participate in our quick fundraising campaigns to help us meet
                   urgent needs and respond swiftly to emergencies.
                 </p>
-                <button className="centerBtn smallBtn">
-                  Learn more <TiArrowRightThick className="arrow-right" />
-                </button>
+                <a href="/DonationPage">
+                  <button className="centerBtn smallBtn">
+                    Learn more <TiArrowRightThick className="arrow-right" />
+                  </button>
+                </a>
               </div>
             </div>
             {/* Content for each tab goes here */}
@@ -83,48 +92,15 @@ const Home = () => {
               we feel that we are walking in the footsteps of Jesus Christ.
             </p>
             <center>
-              <button className="centerBtn">
-                Learn more <TiArrowRightThick className="arrow-right" />
-              </button>
+              <a href="/AboutUs">
+                <button className="centerBtn">
+                  Learn more <TiArrowRightThick className="arrow-right" />
+                </button>
+              </a>
             </center>
           </div>
         </div>
-        {/* <div className="box-home wedding">
-          <div className="wedding-left">
-            <h2 className="title-box two">weddings</h2>
-            <p className="about-home wedding-text">
-              Our church offers a traditional setting for your most sacred
-              celebration.
-            </p>
-            <center>
-              <button className="centerBtn">
-                Learn more <TiArrowRightThick className="arrow-right" />
-              </button>
-            </center>
-          </div>
-        </div> */}
-        {/* <div className="box-home services">
-          <h2 className="title-box ">services</h2>
-          <br />
-          <div className="service-info">
-            <h4>Sunday Morning Services</h4>
-            <p>10:00 AM To 01:00 PM</p>
-          </div>
-          <div className="service-info">
-            <h4>Tuesday Home Prayer</h4>
-            <p>11:00 AM To 01:00 PM</p>
-          </div>
-          <div className="service-info">
-            <h4>Friday Fasting Prayer</h4>
-            <p>10:00 AM To 01:00 PM</p>
-          </div>
-          <div className="additional-info">
-            <p>
-              Any Additional Services Will Be Announced On Our Notice Board And
-              On Our Website.
-            </p>
-          </div>
-        </div> */}
+  
       </div>
     </main>
   );
