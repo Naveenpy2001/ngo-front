@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./css/header2.css";
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
@@ -10,9 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1 className="centerH1">
-        BETHESDA GOSPEL MINISTRY TRUST
-      </h1>
+      <h1 className="centerH1">BETHESDA GOSPEL MINISTRY TRUST</h1>
       <div className="container">
         <div className="logo">
           <Logo />
@@ -50,7 +48,14 @@ const Navbar = () => {
               <NavLink to="/ContactUs">Contact Us</NavLink>
             </li>
             <li>
-              <NavLink to="/DonationPage"> Donation</NavLink>
+              <NavLink to="/Donation-Page"> Donation</NavLink>
+            </li>
+
+            <li>
+              <Link to="/DonationPage#donation" className="DonateButton">
+                {" "}
+                Donate Now
+              </Link>
             </li>
           </ul>
         </div>

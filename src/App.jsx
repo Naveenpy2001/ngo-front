@@ -12,7 +12,11 @@ import PartnersPage from "./components/partnersWithUs";
 import DonationPage from "./components/donations";
 import Register from "./components/register";
 
-import {Routes, Route} from 'react-router-dom'
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsOfUse from "./components/terms-of-use";
+import RefundAndReturnsPolicy from "./components/RefundAndReturnsPolicy";
+import {Routes, Route} from 'react-router-dom';
+
 
 
 const App = () => {
@@ -28,10 +32,12 @@ const App = () => {
         <Route path="/AboutUs" element={<AboutUsPage />} />
         <Route path="/Document" element={<NGODocument />} />
         <Route path="/PartnersPage" element={<PartnersPage />} />
+        <Route path="/Donation-Page" element={<DonationPage />} />
         <Route path="/DonationPage" element={<DonationPage />} />
         <Route path="/Register" element={<Register />} />
-    
-
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/refund-returns" element={<RefundAndReturnsPolicy />} />
       </Routes>
       <Footer />
     </>

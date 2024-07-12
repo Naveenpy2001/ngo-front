@@ -1,0 +1,41 @@
+.privacy-container {
+    padding: 20px 140px;
+}
+
+.privacy-header {
+    font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 600;
+}
+
+.privacy-section {
+    margin-bottom: 20px;
+}
+
+.privacy-section-header {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.privacy-subsection-header {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.privacy-paragraph {
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    padding: 2px 30px;
+    color: #414141;
+}
+
+.privacy-address {
+    font-style: normal;
+    line-height: 1.5;
+}

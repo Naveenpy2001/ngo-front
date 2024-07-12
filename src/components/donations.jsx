@@ -65,7 +65,7 @@ const Donations = () => {
           {/* <button className="animated-button">Donate</button> */}
         </div>
       </div>
-      <div className="main-donation">
+      <div className="main-donation" id="donation">
         <div className="flex-start">
           <h2 className="page-heading">Why Donate?</h2>
         </div>
@@ -95,7 +95,10 @@ const Donations = () => {
               </form>
             </div>
             <div className="donation-image">
-              <img src="https://ottawamommyclub.ca/wp-content/uploads/2020/08/Ways-To-Help-Your-Children-Learn-The-Art-Of-Giving-768x640.jpg " alt="Donate" />
+              <img
+                src="https://ottawamommyclub.ca/wp-content/uploads/2020/08/Ways-To-Help-Your-Children-Learn-The-Art-Of-Giving-768x640.jpg "
+                alt="Donate"
+              />
             </div>
           </div>
         </div>
