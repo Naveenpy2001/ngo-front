@@ -26,8 +26,7 @@ const ImageSlider = () => {
         "An NGO (Non-Governmental Organization) is a non-profit entity that operates independently from any government. NGOs are usually dedicated to addressing social, political, or environmental issues. They play a crucial role in society by advocating for human rights, providing humanitarian aid, and implementing sustainable development projects. ",
     },
     {
-      image:
-        "https://vidya-india.org/wp-content/uploads/2017/12/vidyaindia_children_youth_women_ngo_compressed.jpg",
+      image: "https://c1.staticflickr.com/5/4027/4718655067_38420297b8_b.jpg",
       title: "NGO Donations",
       description:
         "NGO donations are financial or in-kind contributions made by individuals, corporations, or governments to support the work and initiatives of NGOs. These donations are vital for the sustainability and effectiveness of NGO projects, as they fund activities such as disaster relief, educational programs, healthcare services, and environmental conservation efforts. ",
