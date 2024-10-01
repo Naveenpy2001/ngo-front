@@ -232,3 +232,42 @@ a{
     font-size: 1.2rem;
     font-style: italic;
 }
+
+
+
+/* ScrollingText.css */
+.mrq{
+    padding: 10px 0;
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    color: red;
+    gap: 5px;
+    justify-content: center;
+}
+.txt{
+    font-size: 22px;
+    color: red;
+}
+.blink{
+    color: red;
+    animation: blinkText 2s ease-in-out infinite;
+}
+
+@keyframes blinkText {
+    0%{
+        color: red;
+    }
+    25%{
+        color: #ffd8d8;
+    }
+    50%{
+        color: red;
+    }
+    75%{
+        color: #ffd8d8;    
+    }
+    100%{
+        color: red;
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./css/header2.css";
+import RazorPaybtn from "./components/RazorPaybtn";
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
 
@@ -10,9 +11,15 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1 className="centerH1">BETHESDA GOSPEL MINISTRY TRUST</h1>
+      <div className="flex bgmtrust-header">
+        <Logo />
+        <h1 className="centerH1 w-100">BETHESDA GOSPEL MINISTRIES TRUST</h1>
+        <div className="donate-btn">
+          <RazorPaybtn />
+        </div>
+      </div>
       <div className="container">
-        <div className="logo">
+        <div className="logo" style={{ visibility: "hidden" }}>
           <Logo />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
@@ -38,7 +45,7 @@ const Navbar = () => {
               <NavLink to="/Document">Document</NavLink>
             </li>
             <li>
-              <NavLink to="/PartnersPage">partners with us</NavLink>
+              <NavLink to="/PartnersPage">Partners With Us</NavLink>
             </li>
 
             <li>
@@ -49,13 +56,6 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink to="/Donation-Page"> Donation</NavLink>
-            </li>
-
-            <li>
-              <Link to="/DonationPage#donation" className="DonateButton">
-                {" "}
-                Donate Now
-              </Link>
             </li>
           </ul>
         </div>
@@ -116,7 +116,8 @@ const Logo = () => (
     <img
       src="https://static.wixstatic.com/media/8b6520_76fb9754389d441b95bd5ba5df024c10~mv2.png/v1/fill/w_144,h_134,al_c,q_85,usm_1.20_1.00_0.01,enc_auto/8b6520_76fb9754389d441b95bd5ba5df024c10~mv2.png"
       alt="logo"
-      width='30%'
+      width='40%'
+      className="bgm-logo"
     />
   </>
 );

@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "../css/contactUs.css";
 import Swal from "sweetalert2";
 
+import { HiOutlineMail } from "react-icons/hi";
+import { MdOutlineLocalPhone } from "react-icons/md";
+
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -43,11 +47,10 @@ const ContactForm = () => {
         },
         body: JSON.stringify(formData),
       });
-
+    
       if (response.ok) {
-        // Handle successful form submission
             setLoading(false);
-
+            
         Swal.fire({
           position: "center",
           icon: "success",
@@ -108,7 +111,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               className="form-input"
-              placeholder="your name"
+              placeholder="Full Name"
             />
           </div>
           <div className="form-group">
@@ -183,35 +186,39 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <div className="flex-center">
+      <div className="flex bgm-map-flex">
         <div className="address-details">
+          <div className="footer-section">
+            <h3>Contact Information</h3>
+            <p className="email-f flex-c">
+              weslyjohnpaulraj@gmail.com
+            </p>
+            <p className="phone flex">
+              +91 8142616767{" "}
+            </p>
+          </div>
+
           <h3 className="address-details-title">Address Details</h3>
           <div className="address-field">
             <strong className="label">Address:</strong>{" "}
             <span className="value">
-              12-151-37/1, East pate punganur-517247, andhra pradesh , india.
+              12-203/745, Church Street, Nakkabanda, Pungunur, <br /> Chittoor -
+              517247, Andhra Pradesh
             </span>
           </div>
-          <div className="address-field">
-            <strong className="label">City:</strong>{" "}
-            <span className="value">punganur</span>
-          </div>
-          <div className="address-field">
-            <strong className="label">ZIP Code:</strong>{" "}
-            <span className="value">517247</span>
-          </div>
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.8324472632903!2d78.56843657850699!3d13.360692453450318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb27f104a493f9f%3A0xf1c096c1a487eb87!2sEast%20peta!5e0!3m2!1sen!2sin!4v1715689353158!5m2!1sen!2sin"
-          width="600"
-          height="450"
-          style={{ border: "0", width: "100%" }}
-          allowfullscreen="true"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          className="maaap"
-          title="map"
-        ></iframe>
+        <div className="bgm-loc">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31053.87556945072!2d78.53341600010278!3d13.366781369306471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb27eb3b8ce6059%3A0x9bf361635fb66a8a!2sPunganur%2C%20Andhra%20Pradesh%20517247!5e0!3m2!1sen!2sin!4v1720769061482!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style={{ border: "0", width: "100%" }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="map"
+          ></iframe>
+        </div>
       </div>
 
       <center>
