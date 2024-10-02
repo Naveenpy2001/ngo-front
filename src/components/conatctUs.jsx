@@ -36,14 +36,14 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/contact/", {
+      const response = await fetch("https://bethesdagospelministriestrust.org/save", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-
+       console.log("saved successed")
       if (response.ok) {
         // Handle successful form submission
             setLoading(false);
