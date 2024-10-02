@@ -17,6 +17,8 @@ import TermsOfUse from "./components/terms-of-use";
 import RefundAndReturnsPolicy from "./components/RefundAndReturnsPolicy";
 import {Routes, Route} from 'react-router-dom';
 
+import WhatsAppLink from "./components/WhatsappLink";
+
 
 
 const App = () => {
@@ -39,6 +41,7 @@ const App = () => {
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/refund-returns" element={<RefundAndReturnsPolicy />} />
       </Routes>
+      <WhatsAppLink />
       <Footer />
     </>
   );

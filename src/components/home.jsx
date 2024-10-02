@@ -3,9 +3,21 @@ import SliderComponent from "./imgSlider";
 // import '../css/Slider.css';
 import { TiArrowRightThick } from "react-icons/ti";
 import "../css/home.css";
+
+import { IoMdStar } from "react-icons/io";  
 const Home = () => {
+
   return (
     <main>
+      <marquee behavior="scroll" direction="left" className="mrq">
+        <IoMdStar />
+        <span className="blink"> Your Donations Are 50% Tax Deductible. </span>
+        <IoMdStar />{" "}
+        <span className="txt">
+          We Have <q>8G</q> and <q>12A</q> Certificates
+        </span>{" "}
+        <IoMdStar />
+      </marquee>
       <br />
       <div className="home-container">
         <div className="img-slider">
@@ -100,8 +112,8 @@ const Home = () => {
             </center>
           </div>
         </div>
-  
       </div>
+
     </main>
   );
 };

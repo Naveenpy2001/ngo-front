@@ -1,51 +1,15 @@
 // Donations.js
 
-import React, { useEffect } from "react";
+import React from "react";
 import "../css/donation.css"; // Import your CSS file
+
+import DonationButton from "./DonateBTN";
+
+
+import RazorPaybtn from "./RazorPaybtn";
 const Donations = () => {
 
 
-  // useEffect(() => {
-  //   // Create a script element
-  //   const script = document.createElement("script");
-  //   script.src = "https://checkout.razorpay.com/v1/payment-button.js";
-  //   script.setAttribute("data-payment_button_id", "pl_OIMc73io24Hstc");
-  //   script.async = true;
-
-  //   // Append the script to the razorpay button container div
-  //   document.getElementById("razorpay-button-container").appendChild(script);
-  // }, []);
-
-   useEffect(() => {
-     // Remove any existing script to avoid duplicates
-     const existingScript = document.querySelector(
-       'script[data-payment_button_id="pl_OIMc73io24Hstc"]'
-     );
-     if (existingScript) {
-       existingScript.remove();
-     }
-
-     // Create a script element
-     const script = document.createElement("script");
-     script.src = "https://checkout.razorpay.com/v1/payment-button.js";
-     script.setAttribute("data-payment_button_id", "pl_OIMc73io24Hstc");
-     script.async = true;
-
-     // Append the script to the form element
-     const form = document.getElementById("razorpay-payment-form");
-     if (form) {
-       form.appendChild(script);
-
-       // Add event listener to check if the script is loaded
-       script.onload = () => {
-         console.log("Razorpay button script loaded successfully");
-       };
-
-       script.onerror = () => {
-         console.error("Payment Button script failed to load.");
-       };
-     }
-   }, []);
   
 
 
@@ -90,9 +54,8 @@ const Donations = () => {
               <span className="small-white">
                 click this button for donation
               </span>
-              <form id="razorpay-payment-form">
-                <div className="razorpay-payment-button-container"></div>
-              </form>
+              {/* <RazorPaybtn /> */}
+              <DonationButton />
             </div>
             <div className="donation-image">
               <img
